@@ -5,6 +5,9 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$"friends".click(listenerFunction)
+
+
 /*
  * Function that is called when the document is ready.
  */
@@ -43,4 +46,19 @@ function anagrammedName(name) {
 		console.log(name + " not known for anagramming.");
 		return name;
 	}
+
+function nameClick(e) {
+	console.log("Name clicked");
+	e.preventDefault();
+
+	var currentName = $(this).text();
+	console.log(currentName);
+	$(this).text(anagrammedName(currentName));
+}
+
+
+
+
+
+
 }
